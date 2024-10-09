@@ -34,9 +34,19 @@ cp .env.example .env
 php artisan key:generate
 ```
 
+- Migrate tables Database
+```shell
+php artisan migrate
+```
+
 - Running the Project
 ```shell
 php artisan serve
+```
+
+- If you have troubles with start server as artisan
+```shell
+php -S localhost:8010 -t public
 ```
 
 - Running Tests

@@ -50,9 +50,9 @@ class DashboardController extends Controller
 
         return view('lucky', [
             'randomNumber' => $luckyResult->randomNumber,
-            'result'       => $luckyResult->type,
-            'winAmount'    => $luckyResult->points,
-            'uuid'         => $uuid,
+            'result' => $luckyResult->type,
+            'winAmount' => $luckyResult->points,
+            'uuid' => $uuid,
         ]);
     }
 

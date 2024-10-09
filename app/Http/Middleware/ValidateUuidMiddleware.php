@@ -17,13 +17,13 @@ class ValidateUuidMiddleware
     {
         $uuid = $request->route('uuid');
 
-        if (!$uuid || !Uuid::isValid($uuid)) {
+        if (! $uuid || ! Uuid::isValid($uuid)) {
             abort(404, 'UUID wrong.');
         }
 
         $link = $this->linkRepository->findActiveByUuid($uuid);
 
-        if (!$link) {
+        if (! $link) {
             abort(404, 'Link expired.');
         }
 

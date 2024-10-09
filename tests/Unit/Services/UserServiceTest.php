@@ -73,6 +73,7 @@ class UserServiceTest extends TestCase
 
         $this->assertFalse($link->fresh()->active);
     }
+
     public function testDeactivateLinkWhenNoActiveLink()
     {
         $user = User::factory()->create();
